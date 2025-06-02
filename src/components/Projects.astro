@@ -1,40 +1,46 @@
 ---
 import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
+import Laravel from "./icons/Laravel.astro"
 import Tailwind from "./icons/Tailwind.astro"
+import React from "./icons/React.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
+  LARAVEL: {
+    name: "Laravel",
+    class: "bg-[#411f18] text-white",
+    icon: Laravel,
   },
   TAILWIND: {
     name: "Tailwind CSS",
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  REACT: {
+    name: "React",
+    class: "bg-[#003159] text-white",
+    icon: React,
+  },
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Dabadub",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "A blog and guide for Spanish speakers moving to Ireland, created in collaboration with Dublineros, the largest Spanish-speaking community in the country. Built with React on the frontend and a Laravel-powered API on the backend.",
+    link: "https://www.dabadub.com/",
+    github: "https://github.com/gonzalogomez23/dabadub",
+    image: "/projects/dabadub.jpg",
+    tags: [TAGS.REACT, TAGS.LARAVEL, TAGS.TAILWIND],
   },
-  {
+  /* {
     title: "AdventJS - Retos de programación con JavaScript y TypeScript",
     description:
       "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
     link: "https://adventjs.dev",
     image: "/projects/adventjs.webp",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
+  }, */
 ]
 ---
 
