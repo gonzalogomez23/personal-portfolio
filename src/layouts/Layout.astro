@@ -27,9 +27,7 @@ const { description, title } = Astro.props
 
   <body class="relative text-black dark:text-white pb-16">
     <div
-      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
-      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
-      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-zinc-900 box"
     >
     </div>
     <Header />
@@ -51,6 +49,26 @@ const { description, title } = Astro.props
         flex-direction: column;
         min-height: 100vh;
         overscroll-behavior: none;
+      }
+
+      /* Modo claro (por defecto) */
+      .box {
+        background-image: radial-gradient(
+          ellipse 80% 80% at 50% -20%,
+          rgba(217, 216, 255, 0.5),
+          rgba(255, 255, 255, 0.9)
+        );
+      }
+
+      /* Opción A: detectar modo oscuro por preferencia del sistema */
+      @media (prefers-color-scheme: dark) {
+        .box {
+          background-image: radial-gradient(
+            ellipse 80% 80% at 50% -20%,
+            rgba(146, 255, 250, 0.215),
+            rgba(255, 255, 255, 0)
+          );
+        }
       }
 
       @media (prefers-reduced-motion: reduce) {
