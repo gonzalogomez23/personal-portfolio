@@ -3,6 +3,7 @@ import GitHub from "./icons/GitHub.astro"
 import Laravel from "./icons/Laravel.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import React from "./icons/React.astro"
+import Typescript from "./icons/Typescript.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
@@ -22,6 +23,11 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: React,
   },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#003159] text-white",
+    icon: Typescript,
+  },
 }
 const PROJECTS = [
   {
@@ -31,7 +37,16 @@ const PROJECTS = [
     link: "https://www.dabadub.com/",
     github: "https://github.com/gonzalogomez23/dabadub-frontend",
     image: "/projects/dabadub.jpg",
-    tags: [TAGS.REACT, TAGS.LARAVEL, TAGS.TAILWIND],
+    tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.LARAVEL, TAGS.TAILWIND],
+  },
+  {
+    title: "Trello Clone",
+    description:
+      "A Trello board clone built with React and Tailwind CSS, featuring drag-and-drop functionality and real-time updates.",
+    link: "https://gonzalogomez23.github.io/trello-clone/",
+    github: "https://github.com/gonzalogomez23/trello-clone",
+    image: "/projects/trello-clone.png",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
   }
 ]
 ---
@@ -41,7 +56,7 @@ const PROJECTS = [
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-lg overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-xl border border-teal-300 hover:border-teal-200">
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-lg overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-xl">
       <img alt={title} class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>

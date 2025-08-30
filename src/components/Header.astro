@@ -16,12 +16,7 @@ const navItems = [
     title: "About me",
     label: "about-me",
     url: "/#about-me",
-  },
-  {
-    title: "Contact",
-    label: "contact",
-    url: "mailto:gonzalo.gm.utiel@gmail.com",
-  },
+  }
 ]
 ---
 
@@ -34,7 +29,7 @@ const navItems = [
     {
       navItems.map((link) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-gray-500 dark:hover:text-teal-400"
+          class="section-link relative block px-2 py-2 transition hover:text-gray-500 dark:hover:text-teal-400"
           aria-label={link.label}
           href={link.url}
         >
@@ -42,6 +37,13 @@ const navItems = [
         </a>
       ))
     }
+    <a
+      class="relative block px-2 py-2 transition hover:text-gray-500 dark:hover:text-teal-400"
+      aria-label="contact"
+      href="mailto:gonzalo.gm.utiel@gmail.com"
+    >
+      Contact
+    </a>
     <ThemeToggle />
   </nav>
 </header>
@@ -49,7 +51,7 @@ const navItems = [
 <script>
   document.addEventListener("astro:page-load", () => {
     const sections = document.querySelectorAll("section")
-    const navItems = document.querySelectorAll("header nav a")
+    const navItems = document.querySelectorAll("header nav .section-link")
 
     const callback = (entries: any[]) => {
       entries.forEach((entry) => {
